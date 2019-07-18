@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43788e60-f3d9-4a85-a5f7-39caae2c3f30" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestImages/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestImages/a20ziikgrb511.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestImages/fb7dbgj04uw01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestImages/g8luc5g373p01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestImages/gjd65r5xpbe11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestImages/mobbeit2lvr01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestImages/qbm8v8w72eb11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestImages/qgaivs9h1pf01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestImages/s609dncsy7211.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestImages/ybm8i12j2bq11.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/craigsGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/craigsGUI.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/craigsGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="33" column="147" selection-start-line="33" selection-start-column="147" selection-end-line="33" selection-end-column="147" />
+            <state relative-caret-position="211">
+              <caret line="51" column="69" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -55,8 +44,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="342" />
-    <option name="y" value="-18" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="978" />
     <option name="height" value="1039" />
   </component>
@@ -72,6 +61,11 @@
             <path>
               <item name="CraigsCrawler" type="b2602c69:ProjectViewProjectNode" />
               <item name="CraigsCrawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CraigsCrawler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CraigsCrawler" type="462c0819:PsiDirectoryNode" />
+              <item name="testImages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -172,8 +166,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/craigsGUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="33" column="147" selection-start-line="33" selection-start-column="147" selection-end-line="33" selection-end-column="147" />
+        <state relative-caret-position="211">
+          <caret line="51" column="69" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
