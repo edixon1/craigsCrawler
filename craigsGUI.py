@@ -16,45 +16,45 @@ def __init__(self, link_list, image_link_list, price_list, city_list):
 def test_main():
     make_GUI_boxes()
 
-def addimages(): #creates a directory and adds images to it in jpeg format pulled from the URL
+def add_images(): #creates a directory and adds images to it in jpeg format pulled from the URL
     imageNum = 0
-    pathDirs = []
-    os.mkdir('./testImages')
+    path_dirs = []
+    os.mkdir('./craigsImages')
     for i in image_link_list:
-        urllib.request.urlretrieve(i, "./testimages/image" + str(imageNum) + ".jpg")
-        pathDirs.append("./testImages/image" + str(imageNum) + ".jpg")
+        urllib.request.urlretrieve(i, "./craigsimages/image" + str(imageNum) + ".jpg")
+        pathDirs.append("./craigsimages/image" + str(imageNum) + ".jpg")
         imageNum += 1
 
-def rmimages():
-    shutil.rmtree('./testImages') #Deletes the image directory and its contents
+def rm_images():
+    shutil.rmtree('') #Deletes the image directory and its contents
 
-def make_GUI_boxes(): #creates the widgets inide of the GUI (this allows for a variable number of inputs)
-    tk_img_dict = {}
-    tk_border_dict = {}
-    counter = 0
+def make_gui():
+    root = Tk()
+    basewidth = 300 #Resizes the images
     abs_dir = os.path.dirname(os.path.abspath(__file__))
+    x_grid = 0
+    y_grid = 0
     for i in range(len(image_link_list)):
-        img = Image.open(os.path.join(abs_dir, 'testImages/image' + str(counter) + '.jpg'))
-        tk_img_dict.update({counter: img})
+        img = Image.open(os.path.join(abs_dir, 'craigsImages/image' + str(i) + '.jpg'))
+        widthpercent = (basewidth / float(img.size[0]))
+        hsize = int((float(img.size[1]) * float(widthpercent)))
+        img = img.resize((basewidth, hsize), PIL.Image.ANTIALIAS)
+        img = ImageTk.PhotoImage(img)
+        #why is this only displaying one?
+        inner_frame = Frame(root, bg = 'blue', height = 600, width = 1000)
+        label = Label(inner_frame, image = img, padx = 10, pady = 10)
+        inner_frame.grid(row = x_grid, column = y_grid)
+        print('packing image' + str(i) + 'at ' + str(x_grid) + str(y_grid))
+        label.pack()
+        if y_grid == 1:
+            y_grid == 0
+            x_grid += 1
+        else:
+            y_grid += 1
+    root.mainloop()
 
-
-image_link_list = ['https://images.craigslist.org/00x0x_78IA8DYuBAu_600x450.jpg']
-test_main()
-
-
-#linkList = ["https://asheville.craigslist.org/grd/d/weaverville-alpacas/6930923148.html","https://asheville.craigslist.org/grd/d/weaverville-alpacas/6930923148.html","https://asheville.craigslist.org/grd/d/weaverville-alpacas/6930923148.html","https://asheville.craigslist.org/grd/d/weaverville-alpacas/6930923148.html","https://asheville.craigslist.org/grd/d/weaverville-alpacas/6930923148.html","https://asheville.craigslist.org/grd/d/weaverville-alpacas/6930923148.html","https://asheville.craigslist.org/grd/d/weaverville-alpacas/6930923148.html","https://asheville.craigslist.org/grd/d/weaverville-alpacas/6930923148.html","https://asheville.craigslist.org/grd/d/weaverville-alpacas/6930923148.html","https://asheville.craigslist.org/grd/d/weaverville-alpacas/6930923148.html"]
-#cityList = ["Asheville","Asheville","Charlotte","Weaverville","Charlotte","Asheville","Wilmington", "Raleigh", "Asheville","Waynesville"]
-#priceList = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-
-
-#root = Tk()
-#basewidth = 300 #Resizes the images
-#widthpercent = (basewidth / float(img.size[0]))
-#hsize = int((float(img.size[1]) * float(widthpercent)))
-#img = img.resize((basewidth, hsize), PIL.Image.ANTIALIAS)
-
-
-#tImg = ImageTk.PhotoImage(img)
+image_link_list = ['test']
+make_gui()
 #root.title("CraigsCrawler")
 #outerFrame = Frame(root, bg = 'white', height = 600, width = 1000)
 #outerFrame.pack()
@@ -63,4 +63,3 @@ test_main()
 
 #label = Label(innerFrame1, image = tImg, padx = 10, pady = 10)
 #label.pack()
-#root.mainloop()
